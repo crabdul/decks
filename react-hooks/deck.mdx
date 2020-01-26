@@ -66,23 +66,71 @@ export const theme = vsDark;
 ```jsx title="Function" file=./src/formInput.3.1.jsx subtitle="Create a custom hook"
 ```
 
-```jsx title="Function" file=./src/formInput.3.2.jsx subtitle="Extract hook knowledge into a function"
+```jsx title="Function" file=./src/formInput.3.2.jsx subtitle="Extract hook functionality into a function"
 ```
 
 ```jsx title="Function" file=./src/formInput.3.3.jsx
 ```
 
-```jsx title="Function" file=./src/formInput.3.4.jsx
+```jsx title="Function" file=./src/formInput.3.4.jsx subtitle="Each call to a Hook has a completely isolated state - you can call the same custom Hook twice in a component"
 ```
 
 </CodeSurfer>
 
+
 ---
 
-What is a custom hook?
+What exactly are they useful for?
+
+Reusing stateful logic
+
+---
+
+What makes custom hook?
 
 1. a function that calls other hooks
 2. a function whose name starts with 'use'
+
+---
+
+Rules of hooks 📏
+
+---
+
+Only call Hooks at the top level of your react function
+
+- Don't call Hooks inside loops, conditions, or nested functions
+- Hooks must always be called in the same order each time a component renders
+
+---
+
+Custom hooks names should start with 'use'
+
+Make it obvious that a function contains stateful logic
+
+---
+
+Enforcing these rules
+
+```bash
+npm install eslint-plugin-react-hooks --save-dev
+```
+
+---
+
+```js
+// Your ESLint configuration
+{
+  "plugins": [
+    // ...
+    "react-hooks"
+  ],
+  "rules": {
+    // ...
+    "react-hooks/rules-of-hooks": "error"
+  }
+}
+```
 
 ---
 
@@ -99,3 +147,37 @@ What is a custom hook?
 </Step>
 
 </CodeSurferColumns>
+
+---
+
+Form for fetching pubic repositories for a github user
+
+---
+
+<CodeSurfer>
+
+```jsx file=./src/fetch.1.2.jsx subtitle="Encapsulating data fetching and associated state in a custom hook"
+```
+
+```diff 37 subtitle="A custom hook doesn't need to have a specific signature. It can take any arguments and return any values"
+```
+
+```diff 3:7
+```
+
+```diff 8:31
+```
+
+```diff 33
+```
+
+```diff 37:38,45:47
+```
+
+```diff 37,40:42
+```
+
+```diff 37,48:54
+```
+
+</CodeSurfer>
