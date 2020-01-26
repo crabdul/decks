@@ -12,18 +12,16 @@ export default function Greeting(props) {
         setSurname(e.target.value);
     }
 
-    render() {
-        return (
-            <form>
-                <input
-                    value={name}
-                    onChange={handleNameChange}
-                />
-                <input
-                    value={surname}
-                    onChange={handleSurnameChange}
-                />
-            </form>
-        );
-    }
+    return (
+        <form>
+            <input
+                value={name}
+                onChange={handleNameChange}
+            />
+            <input
+                value={surname}
+                onChange={handleSurnameChange}
+            />
+        </form>
+    );
 }
