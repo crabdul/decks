@@ -11,7 +11,7 @@ function useFormInput (initialValue) {
     }
 }
 
-export default function Greeting(props) {
+export default function UserForm() {
     const {value: valueName, onChange: onChangeName} = useFormInput("Mary");
     const [surname, setSurname] = useState("Poppins");
 

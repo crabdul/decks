@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Greeting(props) {
+export default function UserForm() {
     const [name, setName] = useState("Mary");
     const [surname, setSurname] = useState("Poppins");
 

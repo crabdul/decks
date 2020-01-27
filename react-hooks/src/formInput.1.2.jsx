@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Greeting(props) {
+export default function UserForm() {
     constructor(props) {
         super(props);
         this.state = {
