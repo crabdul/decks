@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Greeting(props) {
+export default function UserForm() {
     const [name, setName] = useState("Mary");
     const [surname, setSurname] = useState("Poppins");
 
@@ -12,18 +12,16 @@ export default function Greeting(props) {
         setSurname(e.target.value);
     }
 
-    render() {
-        return (
-            <form>
-                <input
-                    value={name}
-                    onChange={handleNameChange}
-                />
-                <input
-                    value={surname}
-                    onChange={handleSurnameChange}
-                />
-            </form>
-        );
-    }
+    return (
+        <form>
+            <input
+                value={name}
+                onChange={handleNameChange}
+            />
+            <input
+                value={surname}
+                onChange={handleSurnameChange}
+            />
+        </form>
+    );
 }

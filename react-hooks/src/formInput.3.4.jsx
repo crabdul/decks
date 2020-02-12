@@ -1,15 +1,24 @@
 import React from 'react';
 
-export default function Greeting(props) {
+function useFormInput (initialValue) {
+    const [value, setValue] = useState(initialValue);
+    function handleChange(e) {
+        setValue(e.target.value);
+    }
+    return {
+        value,
+        onChange: handleChange
+    }
+}
+
+export default function UserForm() {
     name = useFormInput("Mary");
     surname = useFormInput("Poppins")
 
-    render() {
-        return (
-            <form>
-                <input {...name} />
-                <input {...surname} />
-            </form>
-        );
-    }
+    return (
+        <form>
+            <input {...name} />
+            <input {...surname} />
+        </form>
+    );
 }
